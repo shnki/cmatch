@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "./components/head";
 import MatchBoard from "./components/matchBoard";
 import LeagueBoard from "./components/leagues";
+import ChampionshipBoard from "./components/ChampionshipBoard";
 
 interface ChampionshipMatch {
   championship_title: string;
@@ -31,26 +32,13 @@ export default async function Home() {
       <div className="flex flex-row w-full">
         <div className="flex flex-col flex-grow">
           {ChampionshipData.map((ChampionshipData: ChampionshipData) => (
-            <div
-              id={ChampionshipData.championship_title}
+            <ChampionshipBoard
               key={ChampionshipData.championship_title}
-              className="py-5"
-            >
-              <h1 className="bg-white text-black px-5" dir="rtl">
-                {ChampionshipData.championship_title}
-              </h1>
-              {ChampionshipData.championshipsMatches.map(
-                (championShipMatch: ChampionshipMatch) => (
-                  <MatchBoard
-                    key={championShipMatch.championship_title}
-                    data={championShipMatch}
-                  />
-                )
-              )}
-            </div>
+              data={ChampionshipData}
+            />
           ))}
         </div>
-        <div className="hidden md:block px-5 gap-3.5">
+        <div className="hidden md:block px-5 py-5 gap-3.5">
           <div className="flex flex-col">
             {ChampionshipData.map((ChampionshipData: ChampionshipData) => (
               <LeagueBoard
