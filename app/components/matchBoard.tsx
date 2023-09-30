@@ -1,17 +1,5 @@
 import Image from "next/image";
-
-interface ChampionshipMatch {
-  championship_title: string;
-  team_a: string;
-  team_b: string;
-  team_A_image: string;
-  team_B_image: string;
-  round: string;
-  score: string;
-  matches: string;
-  channel: string;
-  status: string;
-}
+import { ChampionshipMatch } from "../types";
 
 export default function MatchBoard(props: { data: ChampionshipMatch }) {
   const {
@@ -24,6 +12,7 @@ export default function MatchBoard(props: { data: ChampionshipMatch }) {
     matches,
     channel,
     status,
+    detailsUrl,
   } = props.data;
   return (
     <div className="flex flex-col justify-center items-center border-2 w-full px-5">

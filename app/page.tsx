@@ -3,24 +3,7 @@ import Header from "./components/head";
 import MatchBoard from "./components/matchBoard";
 import LeagueBoard from "./components/leagues";
 import ChampionshipBoard from "./components/ChampionshipBoard";
-
-interface ChampionshipMatch {
-  championship_title: string;
-  team_a: string;
-  team_b: string;
-  team_A_image: string;
-  team_B_image: string;
-  round: string;
-  score: string;
-  matches: string;
-  channel: string;
-  status: string;
-}
-
-interface ChampionshipData {
-  championship_title: string;
-  championshipsMatches: ChampionshipMatch[];
-}
+import { ChampionshipData } from "./types";
 
 export default async function Home() {
   const apiUrl: string = process.env.API_URL!;

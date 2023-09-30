@@ -3,26 +3,8 @@ import { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { FiChevronLeft } from "react-icons/fi";
 import MatchBoard from "./matchBoard";
+import { ChampionshipMatch } from "../types";
 
-interface ChampionshipMatch {
-  championship_title: string;
-  team_a: string;
-  team_b: string;
-  team_A_image: string;
-  team_B_image: string;
-  round: string;
-  score: string;
-  matches: string;
-  channel: string;
-  status: string;
-}
-
-interface ChampionshipData {
-  data: {
-    championship_title: string;
-    championshipsMatches: ChampionshipMatch[];
-  };
-}
 export default function ChampionshipBoard(props: { data: any }) {
   const { championship_title, championshipsMatches } = props.data;
   const [dropDown, setdropDown] = useState(false);
