@@ -11,7 +11,7 @@ export default function Header() {
         height={100}
         alt="header"
       />
-      <h1 className="text-xl md:text-2xl">النهاده</h1>
+      <h1 className="text-xl md:text-2xl">النهارده</h1>
     </div>
   );
 }
