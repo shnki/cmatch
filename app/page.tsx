@@ -1,8 +1,5 @@
 import Header from "./components/head";
-import LeagueBoard from "./components/leagues";
-import ChampionshipBoard from "./components/ChampionshipBoard";
-import { ChampionshipData } from "./types";
-import { DaysContainer } from "./components/daysContainer";
+
 import moment from "moment";
 import { daysRangeArray } from "./utls/dateUtils";
 import ChampionShipsLayout from "./components/ChampionShipsLayout";
@@ -15,7 +12,6 @@ export default async function Home() {
     const res = await fetch(apiUrl, { cache: "no-store" });
     return await res.json();
   };
-  const ChampionshipData = await fetchApiData();
 
   const fetchSevenDaysData = async () => {
     const res = [];
