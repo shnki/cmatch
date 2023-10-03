@@ -6,6 +6,17 @@ const cairo = Cairo({ subsets: ["arabic"] });
 export const metadata: Metadata = {
   title: "ماتشتات النهارده",
   description: "شوف واعرف مواعيد الماتشات النهارده والايام الجايه ",
+  openGraph: {
+    type: "website",
+    siteName: "KoraElnharda",
+    title: "ماتشتات النهارده",
+    description: "شوف واعرف مواعيد الماتشات النهارده والايام الجايه ",
+    images: [
+      {
+        url: "/logo.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
