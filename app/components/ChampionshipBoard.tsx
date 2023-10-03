@@ -11,7 +11,7 @@ export default function ChampionshipBoard(props: { data: any }) {
   return (
     <div className="py-5">
       <div
-        className="flex flex-row-reverse justify-center items-center bg-white cursor-pointer"
+        className="flex flex-row-reverse justify-center items-center sticky top-0 z-50 bg-white cursor-pointer"
         onClick={() => setdropDown(!dropDown)}
       >
         <h1
