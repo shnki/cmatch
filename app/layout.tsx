@@ -4,7 +4,7 @@ import { Inter, Cairo } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 const cairo = Cairo({ subsets: ["arabic"] });
 export const metadata: Metadata = {
-  title: "ماتشتات النهارده",
+  title: "ماتشات النهارده",
   description: "شوف واعرف مواعيد الماتشات النهارده والايام الجايه ",
   openGraph: {
     type: "website",
