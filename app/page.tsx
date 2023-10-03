@@ -23,7 +23,7 @@ export default async function Home() {
   const sevenDaysData = await fetchSevenDaysData();
 
   return (
-    <main className="flex flex-col items-center justify-between p-10 gap-5">
+    <main className="flex flex-col items-center justify-between p-5 md:p-10 gap-5">
       <Header />
       <ChampionShipsLayout sevenDaysData={sevenDaysData} />
     </main>
