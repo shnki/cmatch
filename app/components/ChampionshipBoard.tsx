@@ -9,12 +9,16 @@ export default function ChampionshipBoard(props: { data: any }) {
   const { championship_title, championshipsMatches } = props.data;
   const [dropDown, setdropDown] = useState(false);
   return (
-    <div id={championship_title} key={championship_title} className="py-5">
+    <div className="py-5">
       <div
         className="flex flex-row-reverse justify-center items-center bg-white cursor-pointer"
         onClick={() => setdropDown(!dropDown)}
       >
-        <h1 className="bg-white text-black px-5 flex-1" dir="rtl">
+        <h1
+          id={championship_title}
+          className="bg-white text-black px-5 flex-1"
+          dir="rtl"
+        >
           {championship_title}
         </h1>
         {dropDown ? (
@@ -24,12 +28,11 @@ export default function ChampionshipBoard(props: { data: any }) {
         )}
       </div>
       <div className={`${dropDown ? "hidden" : ""}`}>
-        {championshipsMatches.map((championShipMatch: ChampionshipMatch) => (
-          <MatchBoard
-            key={championShipMatch.championship_title}
-            data={championShipMatch}
-          />
-        ))}
+        {championshipsMatches.map(
+          (championShipMatch: ChampionshipMatch, index: number) => (
+            <MatchBoard key={index} data={championShipMatch} />
+          )
+        )}
       </div>
     </div>
   );
